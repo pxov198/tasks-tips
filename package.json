@@ -1,0 +1,19 @@
+{
+  "name": "tasks-tips",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tasks / Tips static site and Android app",
+  "scripts": {
+    "android:assets": "node scripts/prepare-android-assets.js",
+    "android:add": "npm run android:assets && cap add android",
+    "android:sync": "npm run android:assets && cap sync android",
+    "android:open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/core": "^8.5.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3"
+  }
+}

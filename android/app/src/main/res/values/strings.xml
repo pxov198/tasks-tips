@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tasks / Tips</string>
+    <string name="title_activity_main">Tasks / Tips</string>
+    <string name="package_name">com.pxov198.taskstips</string>
+    <string name="custom_url_scheme">com.pxov198.taskstips</string>
+</resources>
