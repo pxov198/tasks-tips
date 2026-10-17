@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f1e8">
+    <meta name="description" content="A calmer place to gather today's tasks and find a little momentum.">
+    <title>Tasks / Tips</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#main" aria-label="Tasks / Tips home">
+          <span class="wordmark-mark" aria-hidden="true">t.</span>
+          <span>tasks <span class="wordmark-slash">/</span> tips</span>
+        </a>
+        <div class="topbar-right">
+          <span class="topbar-note">A little less spinning. A little more done.</span>
+          <span class="topbar-date" id="today-date"></span>
+        </div>
+      </header>
+
+      <main id="main" class="workspace">
+        <aside class="rail" aria-label="Task views">
+          <p class="eyebrow">Your desk</p>
+          <h1>Make room<br>for the work.</h1>
+          <nav class="view-tabs" aria-label="Filter tasks">
+            <button class="view-tab is-active" type="button" data-filter="all" aria-pressed="true">
+              <span>Everything</span><span class="tab-count" id="all-count">0</span>
+            </button>
+            <button class="view-tab" type="button" data-filter="open" aria-pressed="false">
+              <span>In progress</span><span class="tab-count" id="open-count">0</span>
+            </button>
+            <button class="view-tab" type="button" data-filter="done" aria-pressed="false">
+              <span>Finished</span><span class="tab-count" id="done-count">0</span>
+            </button>
+          </nav>
+          <div class="rail-footer">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Saved on this device</span>
+          </div>
+        </aside>
+
+        <section class="task-panel" aria-labelledby="tasks-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" id="section-kicker">A fresh start</p>
+              <h2 id="tasks-heading">Today's list<span class="heading-period">.</span></h2>
+            </div>
+            <span class="task-total" id="task-total">0 tasks</span>
+          </div>
+
+          <form class="add-form" id="add-form">
+            <label class="visually-hidden" for="task-input">Add a task</label>
+            <input id="task-input" name="task" type="text" maxlength="120" placeholder="What needs doing?" autocomplete="off" required>
+            <button class="add-button" type="submit"><span aria-hidden="true">+</span> Add task</button>
+          </form>
+
+          <div class="list-toolbar">
+            <span id="list-label">YOUR TASKS</span>
+            <button class="text-button" id="clear-done" type="button" hidden>Clear finished</button>
+          </div>
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+          <p class="empty-state" id="empty-state" hidden></p>
+        </section>
+
+        <aside class="side-note" aria-label="Daily progress and tip">
+          <section class="progress-block" aria-labelledby="progress-heading">
+            <div class="side-heading">
+              <p class="eyebrow">The small wins</p>
+              <span class="progress-number" id="progress-number">0%</span>
+            </div>
+            <h2 id="progress-heading">Progress,<br>not perfection.</h2>
+            <div class="progress-track" role="progressbar" aria-label="Tasks completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track">
+              <span class="progress-fill" id="progress-fill"></span>
+            </div>
+            <p class="progress-caption" id="progress-caption">Pick one thing and begin.</p>
+          </section>
+
+          <section class="tip-block" aria-labelledby="tip-heading">
+            <div class="tip-topline">
+              <p class="eyebrow">A thought for today</p>
+              <span class="tip-index" id="tip-index">01 / 05</span>
+            </div>
+            <h2 id="tip-heading">Make the next step smaller.</h2>
+            <p class="tip-copy" id="tip-copy">If a task feels heavy, write down the first five-minute action. Starting is its own kind of progress.</p>
+            <button class="tip-button" id="next-tip" type="button" aria-label="Show another tip" title="Show another tip">
+              <span aria-hidden="true">↗</span> Another thought
+            </button>
+          </section>
+
+          <p class="side-signoff">One thing at a time.<br><span>You've got this.</span></p>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
