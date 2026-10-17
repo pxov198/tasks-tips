@@ -22,6 +22,8 @@ For a fresh checkout that does not already contain an `android/` directory, run 
 
 In Android Studio, configure release signing and build a signed Android App Bundle (`.aab`). Upload the bundle in Google Play Console and complete the store listing, app-content declarations, and testing requirements there. The app ID is `com.pxov198.taskstips` and cannot be changed after the app is first published. Never commit your signing keystore or its passwords.
 
+The Play listing icon is `assets/app-icon-512.png`; its scalable source is `assets/app-icon.svg`. The app stores tasks only on the device and does not send task data to a server.
+
 ## Publish with GitHub Pages
 
 Push this repository to GitHub, then open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, select the `main` branch and `/ (root)`, and save. GitHub Pages will publish `index.html` at the repository's Pages URL.
